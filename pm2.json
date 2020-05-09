@@ -1,6 +1,6 @@
 {
     script: "code/blog.js",
-    watch: true,
+    watch: false,
     ignore_watch: ["database"]
     
 }
