@@ -253,6 +253,11 @@ app.post("/remove_art", (req, res) => {
     res.redirect("/")
 })
 
+app.get("/remove", (req, res) => {
+    res.render("remove", {
+        questions: db.get_questions()
+    })
+})
 // questions
 app.get("/:id", (req, res) => {
     const id = req.params.id
@@ -273,7 +278,8 @@ app.post("/remove_question", (req, res) => {
     const question_id = req.body.question_id
     const art_name = req.body.art_name
     db.remove_question(question_id)
-    res.redirect(`/art?name=${art_name}`)
+    //res.redirect(`/art?name=${art_name}`)
+    res.redirect("/remove")
 })
 
 app.post("/up_relevance", (req, res) => {

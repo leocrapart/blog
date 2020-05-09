@@ -67,58 +67,8 @@
       "id": "7jfxibfUC",
       "art": "finance",
       "question": "Comment calculer le BFR ?\r\n",
-      "answers": [
-        {
-          "id": "xuSGg3cPC",
-          "text": "blabla",
-          "date": "Sat 09 May 2020, 11:55",
-          "author": "???",
-          "relevance": -2
-        },
-        {
-          "id": "5Up4qZ7nG",
-          "text": "rgzergreg",
-          "date": "Sat 09 May 2020, 11:55",
-          "author": "???",
-          "relevance": 0
-        },
-        {
-          "id": "_eaoNMbeR",
-          "text": "sgzegregzerge",
-          "date": "Sat 09 May 2020, 11:55",
-          "author": "???",
-          "relevance": -2
-        },
-        {
-          "id": "jj7YLGqc1",
-          "text": "gbuyege'r",
-          "date": "Sat 09 May 2020, 13:40",
-          "author": "???",
-          "relevance": 0
-        },
-        {
-          "id": "nALVqsDh1",
-          "text": "thr",
-          "date": "Sat 09 May 2020, 15:26",
-          "author": "leo",
-          "relevance": 0
-        }
-      ],
-      "views": 337
-    },
-    {
-      "id": "SFVU8qFaO",
-      "art": "Materiaux",
-      "question": "hello it's me",
       "answers": [],
-      "views": 3
-    },
-    {
-      "id": "pcNy3dG9F",
-      "art": "Chimie",
-      "question": "zreggre",
-      "answers": [],
-      "views": 5
+      "views": 356
     },
     {
       "id": "AOicvCW_Z",
@@ -133,7 +83,7 @@
           "relevance": 0
         }
       ],
-      "views": 57
+      "views": 58
     }
   ],
   "arts": [

@@ -109,10 +109,14 @@ block body
                             input(type="hidden" name=`question_id` value=`${question.id}`)
                             input(type="hidden" name=`art_name` value=`${art.name}`)
                             input.btn.btn-danger.btn-sm(type="submit" value="Delete")
-            +art_tag(art.img_src, `/art?name=${art.name}`, art.name, art.description)
-            for related_question in related_questions
-                if related_question.id != question.id
-                    +side_question(related_question.id, related_question.question, related_question.views)
+            if art
+                +art_tag(art.img_src, `/art?name=${art.name}`, art.name, art.description)
+            else
+                +art_tag("/img/no-discipline.png", "#", "No discipline", "This question has no discipline associated.")
+            if related_questions
+                for related_question in related_questions
+                    if related_question.id != question.id
+                        +side_question(related_question.id, related_question.question, related_question.views)
                             
 
     script.

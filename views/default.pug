@@ -17,7 +17,9 @@ mixin navbar
                 if session
                     if session.status == "admin"
                         li.nav-item
-                            a(href="/upload").nav-link Upload
+                            a(href="/remove").nav-link Questions
+                        li.nav-item
+                            a(href="/upload").nav-link Disciplines
                     if !session.loggedIn
                         li.nav-item
                             a(href="/sign-in").nav-link Sign in

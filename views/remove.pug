@@ -1,0 +1,31 @@
+extends default
+
+block body
+    if session.status == "admin"
+        
+        div.container
+            input.form-control#myInput(type="text" placeholder="Search..").mt-5
+            br
+            table.table.table-striped.table-bordered
+                thead
+                    th Question
+                    th Art
+                tbody#myTable
+                    for question in questions
+                        tr
+                            td
+                                p=question.question
+                                form(method="post" action="/remove_question")
+                                    input(type="hidden" name=`question_id` value=`${question.id}`)
+                                    input(type="hidden" name=`art_name` value=`${question.art}`)
+                                    input.btn.btn-danger.btn-sm(type="submit" value="Delete")
+                            td=question.art
+        script.
+            $(document).ready(function(){
+              $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
