@@ -1,0 +1,53 @@
+mixin navbar
+    nav.navbar.bg-primary.navbar-expand-sm.navbar-dark.fixed-top
+        a(href="/").navbar-brand 
+            img(src="/img/color_wheel.svg"  width="30" height="30" class="d-inline-block align-top" alt="")
+
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+            span(class="navbar-toggler-icon")
+        div.collapse.navbar-collapse#collapsibleNavbar
+            ul.navbar-nav.mr-auto
+                li.nav-item
+                    a(href="/").nav-link Disciplines
+                li.nav-item
+                    a(href="/questions").nav-link Questions
+
+                
+            ul.navbar-nav
+                if session
+                    if session.status == "admin"
+                        li.nav-item
+                            a(href="/upload").nav-link Upload
+                    if !session.loggedIn
+                        li.nav-item
+                            a(href="/sign-in").nav-link Sign in
+                    if session.loggedIn
+                        a(href="/settings")
+                            li.nav-item
+                                a(href="/settings").nav-link= session.username
+                            li.nav-item
+                                a(href="/settings")
+                                    img.nav-link(src="/img/settings.svg" width="40" height="40"  alt="")
+                else
+                    li.nav-item
+                                a(href="/sign-in").nav-link Sign in
+                
+
+html(lang="en")
+    head
+        block head
+            link(rel="icon" type="image/vnd.microsoft.icon" href="/img/favicon.ico")
+            title Xiiki
+            meta(charset="utf-8")
+            meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+            link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+            script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+            link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+            
+
+    body
+        +navbar
+        div.my-3.invisible .
+        block body

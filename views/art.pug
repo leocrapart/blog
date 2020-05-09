@@ -1,0 +1,34 @@
+extends default
+
+mixin question(link, text, views=0)
+    a(href=`${link}`).text-decoration-none.text-dark
+        div.card.mb-2(style="max-width: 600px;").question
+            div.row.no-gutters
+                div.col
+                    div.card-body.p-1
+                        p.card-text.mb-0(style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;")= text
+                        p.card-text.m-0.p-0(style="font-size: 0.8em") #{views} views
+
+block body
+    style.
+        .question:hover {
+            background-color: hsl(0, 0%, 75%);
+            transition: 2s;
+    div.jumbotron.text-center
+        h1=art.name
+        h5=art.description
+            
+        
+    div.container-fluid
+        div.row
+            for question in questions
+                div.col-xl-2.col-lg-3.col-md-4.col-sm-6
+                    +question(`/${question.id}`, question.question, question.views )
+
+                    
+    div.container.mt-5
+        form(method="post" action="ask_question")
+            label(for="question")
+            input(type="hidden" name="art" value=`${art.name}`)
+            textarea.form-control.mb-2(id="question" name="question" placeholder="Your question?")
+            input.btn.btn-success(type="submit" value="Ask")

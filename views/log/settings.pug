@@ -1,0 +1,26 @@
+extends ../default
+
+block body 
+    div.container       
+        table.table.table-bordered.table-striped
+        
+            thead
+                th username
+                th email
+                th password
+                th logged_in
+                th status
+                th logout
+            tbody
+                tr
+                    td=session.username
+                    td=session.email
+                    td=session.password
+                    td=session.loggedIn
+                    td=session.status
+                    td
+                        form(method="POST" action="/log-out")
+                            input(type='hidden')
+                            input.btn.btn-secondary(type="submit" value="Log-out")
+
+            

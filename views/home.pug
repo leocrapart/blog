@@ -1,0 +1,30 @@
+extends default
+
+mixin art_card(art, img_src, description)
+    a(href=`/art?name=${art}`).text-decoration-none.text-dark
+        div.card(style="max-width: 18rem").m-2
+            img.card-img-top(src=`${img_src}` alt=`${art} icon`)
+            div.card-body
+                h5.card-title=art
+                p.card-text(style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;")=description
+
+
+block body
+    div.jumbotron.text-center
+        h4 Ask questions, Answer questions and become a Master
+
+
+    div.container-fluid
+        div.row
+            for art in arts
+                div.col-xl-2.col-lg-3.col-md-4.col-sm-6
+                    +art_card(art.name, art.img_src, art.description)
+                
+        
+        
+        
+        
+        
+        
+        
+        

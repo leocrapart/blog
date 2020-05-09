@@ -1,0 +1,151 @@
+{
+  "users": [
+    {
+      "username": "leo",
+      "email": "leocrapart@yahoo.fr",
+      "password": "leo",
+      "status": "admin"
+    },
+    {
+      "username": "enzo",
+      "email": "crapartenzo@yahoo.fr",
+      "password": "enzo",
+      "status": "watcher"
+    },
+    {
+      "username": "beta tester",
+      "email": "itest@test.fr",
+      "password": "test",
+      "status": "watcher"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Vc6g0KgAX",
+      "art": "finance",
+      "question": "Comment calculer le bilan comptable ?\r\n",
+      "answers": [
+        {
+          "id": "RJYxSk3zA",
+          "text": "gogze'rgt\r\n",
+          "date": "Sat 09 May 2020, 11:55",
+          "author": "???",
+          "relevance": 5
+        },
+        {
+          "id": "2ltcs_ORI",
+          "text": "gegerge",
+          "date": "Sat 09 May 2020, 11:55",
+          "author": "???",
+          "relevance": 0
+        },
+        {
+          "id": "SPZJUKwpI",
+          "text": "zfazaaz",
+          "date": "Sat 09 May 2020, 11:55",
+          "author": "???",
+          "relevance": 8
+        },
+        {
+          "id": "Fep8M7hxs",
+          "text": "e",
+          "date": "Sat 09 May 2020, 15:25",
+          "author": "leo",
+          "relevance": 0
+        },
+        {
+          "id": "Cv-Rm4OVw",
+          "text": "yolo",
+          "date": "Sat 09 May 2020, 17:04",
+          "author": "beta tester",
+          "relevance": 0
+        }
+      ],
+      "views": 183
+    },
+    {
+      "id": "7jfxibfUC",
+      "art": "finance",
+      "question": "Comment calculer le BFR ?\r\n",
+      "answers": [
+        {
+          "id": "xuSGg3cPC",
+          "text": "blabla",
+          "date": "Sat 09 May 2020, 11:55",
+          "author": "???",
+          "relevance": -2
+        },
+        {
+          "id": "5Up4qZ7nG",
+          "text": "rgzergreg",
+          "date": "Sat 09 May 2020, 11:55",
+          "author": "???",
+          "relevance": 0
+        },
+        {
+          "id": "_eaoNMbeR",
+          "text": "sgzegregzerge",
+          "date": "Sat 09 May 2020, 11:55",
+          "author": "???",
+          "relevance": -2
+        },
+        {
+          "id": "jj7YLGqc1",
+          "text": "gbuyege'r",
+          "date": "Sat 09 May 2020, 13:40",
+          "author": "???",
+          "relevance": 0
+        },
+        {
+          "id": "nALVqsDh1",
+          "text": "thr",
+          "date": "Sat 09 May 2020, 15:26",
+          "author": "leo",
+          "relevance": 0
+        }
+      ],
+      "views": 337
+    },
+    {
+      "id": "SFVU8qFaO",
+      "art": "Materiaux",
+      "question": "hello it's me",
+      "answers": [],
+      "views": 3
+    },
+    {
+      "id": "pcNy3dG9F",
+      "art": "Chimie",
+      "question": "zreggre",
+      "answers": [],
+      "views": 5
+    },
+    {
+      "id": "AOicvCW_Z",
+      "art": "kung-fu",
+      "question": "How to make a chi ball ?\r\n",
+      "answers": [
+        {
+          "id": "vVnQOBUpn",
+          "text": "yolo\r\n",
+          "date": "Sat 09 May 2020, 17:26",
+          "author": "leo",
+          "relevance": 0
+        }
+      ],
+      "views": 57
+    }
+  ],
+  "arts": [
+    {
+      "name": "finance",
+      "description": "La finance permet de gagner plein de sous",
+      "img_src": "/img/finance.png"
+    },
+    {
+      "name": "kung-fu",
+      "description": "master the chi",
+      "img_src": "/img/kung-fu.png"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+extends default
+
+block body
+    if session.status == "admin"
+        div.container.jumbotron.text-center.py-3.my-3
+                h4 Add a picture
+
+        div.container
+            form(method="post" action="/upload_img" enctype="multipart/form-data")
+                div.form-group.form-row
+                    label.col-sm-2.col-form-label Image
+                    div.col-sm-10
+                        input.btn(type="file" name="upload" multiple)
+                        button.btn.btn-primary(type="submit") Ajouter
+                        
+        div.container.jumbotron.text-center.py-3.my-3
+                h4 Arts
+
+        div.container
+            form(action="/add_art" method="post")
+                label(for="art") Add art
+                input.form-control(type="text" id="art" name="art_name" placeholder="kung-fu")
+                input.btn.btn-success(type="submit")
+
+            table.table.table-striped.table-bordered
+                thead
+                    th Name
+                    th Description
+                    th image source
+                tbody
+                    for art in arts
+                        tr
+                            td
+                                form(method="post" action="/modify_art")
+                                    input(type="hidden" name="art_name" value=`${art.name}`)
+                                    input.form-control(type="text" name="new_name" value=`${art.name}`)
+                                    
+                                form(method="post" action="/remove_art")
+                                    input(type="hidden" name="art_name" value=`${art.name}`)
+                                    input.btn.btn-danger.btn-sm(type="submit" value="delete")
+                            td
+                                form(method="post" action="/modify_art")
+                                    textarea.form-control(name="description")=art.description
+                                    input(type="hidden" name="art_name" value=`${art.name}`)
+                                    input.btn.btn-muted.btn-sm(type="submit")
+                            td
+                                form(method="post" action="/modify_art")
+                                    input.form-control(name="img_src" value=`${art.img_src}`)
+                                    input(type="hidden" name="art_name" value=`${art.name}`)
+                                    a.btn-muted.btn-sm.text-decoration-none.text-muted(href=`${art.img_src}`) See

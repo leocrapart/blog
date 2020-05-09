@@ -1,0 +1,24 @@
+extends default
+
+mixin question(link, text, views=0)
+    a(href=`${link}`).text-decoration-none.text-dark
+        div.card.mb-2(style="max-width: 600px;").question
+            div.row.no-gutters
+                div.col
+                    div.card-body.p-1
+                        p.card-text.mb-0(style="overflow: hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;")= text
+                        p.card-text.m-0.p-0(style="font-size: 0.75em") #{views} views
+    
+
+block body
+    style.
+        .question:hover {
+            background-color: hsl(0, 0%, 75%);
+            transition: 2s;
+    div.container-fluid
+        div.jumbotron.text-center.mt-4
+            h4 All questions
+        div.row
+            for question in questions
+                div.col-xl-2.col-lg-3.col-md-4.col-sm-6
+                    +question(`/${question.id}`, question.question, question.views )
